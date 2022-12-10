@@ -10,25 +10,24 @@
  */
 int main(void)
 {
-	int n1 = 48;
-	int n2 = 48;
-	int com = 44;
+	int n1 = '0';
+	int n2 = '0';
 
-	while (n1 <= 57)
+	for (n2 = '0'; n2 <= '9'; n2++)
 	{
-		n2 = 48;
-		while (n2 <= 57)
+		for (n1 = '0'; n1 <= '9'; n1++)
 		{
-			putchar(n1);
-			putchar(n2);
-			if (n1 != 57 || n2 != 57)
+			if (!((n1 == n2) || (n2 > n1)))
 			{
-				putchar(com);
-				putchar(32);
+				putchar(n2);
+				putchar(n1);
+				if (!(n1 == '9' && n2 == '8'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			n2 += 1;
 		}
-		n1 += 1;
 	}
 	putchar('\n');
 	return (0);
