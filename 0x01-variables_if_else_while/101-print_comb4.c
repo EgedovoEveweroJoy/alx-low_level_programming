@@ -23,7 +23,6 @@ int main(void)
 			{
 				if (!((n1 == n2) || (n2 == n3) || (n2 > n1) || (n3 > n2)))
 				{
-
 					putchar(n3);
 					putchar(n2);
 					putchar(n1);
@@ -35,6 +34,7 @@ int main(void)
 				}
 			}
 		}
+	}
 	putchar('\n');
 	return (0);
 }
