@@ -22,12 +22,12 @@ int main(void)
 			z = 0;
 			while (z <= 9)
 			{
-				if (x != y && x < y && y !=z && y < z)
+				if (x != y && x < y && y != z && y < z)
 				{
 					putchar(x + 48);
 					putchar(y + 48);
 					putchar(z + 48);
-					if (x +y +z != 24)
+					if (x + y + z != 24)
 					{
 						putchar(',');
 						putchar(' ');
