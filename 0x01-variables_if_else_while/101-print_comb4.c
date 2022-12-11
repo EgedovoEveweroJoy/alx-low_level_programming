@@ -11,29 +11,33 @@
  */
 int main(void)
 {
-	int n1 = '0';
-	int n2 = '0';
-	int n3 = '0';
+	int x = '0';
+	int y, z;
 
-	for (n3 = '0'; n3 <= '9'; n3++)
+	while (x <= 9)
 	{
-		for (n2 = '0'; n2 <= '9'; n2++)
+		y = 0;
+		while (y <= 9)
 		{
-			for (n1 = '0'; n2 <= '9'; n1++)
+			z = 0;
+			while (z <= 9)
 			{
-				if (!((n1 == n2) || (n2 == n3) || (n2 > n1) || (n3 > n2)))
+				if (x != y && x < y && y !=z && y < z)
 				{
-					putchar(n3);
-					putchar(n2);
-					putchar(n1);
-					if (!(n1 == '9' && n3 == '7' && n2 == '8'))
+					putchar(x + 48);
+					putchar(y + 48);
+					putchar(z + 48);
+					if (x +y +z != 24)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
+				++z;
 			}
+			++y;
 		}
+		++x;
 	}
 	putchar('\n');
 	return (0);
