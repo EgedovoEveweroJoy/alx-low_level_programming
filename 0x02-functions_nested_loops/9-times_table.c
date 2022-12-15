@@ -10,8 +10,10 @@ void times_table(void)
 	int row, col;
 	int mult = 0;
 
-	for (row = 0; col < 10; col++)
+	for (row = 0; row < 10; row++)
 	{
+		for (col = 0; col < 10; col++)
+		{
 		mult = (row * col);
 		if (mult < 10)
 		{
@@ -32,4 +34,5 @@ void times_table(void)
 			_putchar(',');
 	}
 	_putchar('\n');
+	}
 }
